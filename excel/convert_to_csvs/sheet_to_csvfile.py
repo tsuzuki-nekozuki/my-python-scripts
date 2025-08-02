@@ -1,17 +1,17 @@
 import csv
 
 from pathlib import Path
-from typing import Union
 
 import openpyxl
 
 
-def excel2csv(infile: Union[str, Path], outdir: Union[str, Path] = '.'):
-    """Create one csv file for each sheet in the workbook.
+def excel2csv(infile: str | Path, outdir: str | Path = '.'):
+    """
+    Create one csv file for each sheet in the workbook.
 
     Args:
-        infile (Union[str, Path]): Input Excel file
-        outdir (Union[str, Path], optional): Output directory. Defaults to '.'.
+        infile (str | Path: Input Excel file
+        outdir (str | Path, optional): Output directory. Defaults to '.'.
 
     Raises:
         ValueError: If input Excel file does not exist.

@@ -1,19 +1,19 @@
 from pathlib import Path
-from typing import Union
 
 import openpyxl
 
 
 def insert_image_to_cell(ws: openpyxl.Workbook.worksheets,
-                         img_path: Union[str, Path],
+                         img_path: str | Path,
                          col_idx: int,
                          row_idx: int,
                          scale: float = 1.0):
-    """Insert a scaled image to the selected cell of the given worksheet.
+    """
+    Insert a scaled image to the selected cell of the given worksheet.
 
     Args:
         ws (openpyxl.Workbook.worksheets): Worksheet
-        img_path (Union[str, Path]): Path to the image
+        img_path (str | Path): Path to the image
         col_idx (int): Column index of the cell
         row_idx (int): Row index of the cell
         scale (float, optional): Scaling factor of the image. Defaults to 1.0.
