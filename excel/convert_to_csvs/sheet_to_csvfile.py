@@ -30,6 +30,10 @@ def excel2csv(infile: Union[str, Path], outdir: Union[str, Path] = '.'):
 
     for iws in wb.sheetnames:
         ws = wb[iws]
+        if len(ws.merged_cells.ranges) > 0:
+            print('Skip sheet "{}" because merged cells are detected.'
+                  .format(iws))
+            continue
         fout = outdir / '{}.csv'.format(iws)
         with open(str(fout), newline='', mode='w') as csvfile:
             writer = csv.writer(csvfile)
@@ -39,6 +43,6 @@ def excel2csv(infile: Union[str, Path], outdir: Union[str, Path] = '.'):
 
 
 if __name__ == '__main__':
-    input = Path('iris-dataset.xlsx')
+    input = Path('iris_dataset.xlsx')
     outputs = Path('out_example')
     excel2csv(input, outputs)
