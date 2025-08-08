@@ -36,6 +36,11 @@ These scripts are tested in the following environment:
 - [Check environment](utils/system_info/check_system_info.py)
     Print system environment.
 
+### Analysis
+
+- [Convert matplotlib canvas into a numpy array](analysis/graph_to_numpy/graph_to_numpy.py)
+    Convert a matplotlib.figure object into a numpy.array.
+
 ### Excel
 
 - [Convert Excel sheet to CSV files](excel/convert_to_csvs/sheet_to_csvfile.py)
