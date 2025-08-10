@@ -37,7 +37,8 @@ These scripts are tested in the following environment:
     Print system environment.
 
 - [OpenCV extensions](utils/opencv_unicode/opencv_ext.py)
-    Read and write images with non-ASCII characters in their file path using OpenCV.
+    Read and write images with non-ASCII chaimport cv2
+racters in their file path using OpenCV.
 
 ### Analysis
 
@@ -54,3 +55,8 @@ These scripts are tested in the following environment:
 
 - [Insert Image to Excel](excel/insert_image_to_cell/insert_image_to_cell.py)
     Insert an image into a specific cell in an Excel file using `openpyxl`.
+
+## License
+
+This repository is released into the public domain.  
+You are free to use, modify, and distribute the code without restrictions.
