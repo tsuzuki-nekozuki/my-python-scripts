@@ -36,7 +36,7 @@ These scripts are tested in the following environment:
 - [Check environment](utils/system_info/check_system_info.py)
     Print system environment.
 
-- [OpenCV for ASCII](utils/opencv_unicode/opencv_ext.py)
+- [OpenCV extensions](utils/opencv_unicode/opencv_ext.py)
     Read and write images with non-ASCII characters in their file path using OpenCV.
 
 ### Analysis
