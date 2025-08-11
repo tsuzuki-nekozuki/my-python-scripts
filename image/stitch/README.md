@@ -7,8 +7,8 @@ Processing steps:
 1. Use AKAZE to find keypoints
 2. Run Flann matcher and distance
 3. Calculate homography matrix
-4. Calculate size, offset and translation to match the image pair
-5. Stitch the image and the base image
+4. Calculate output size, offset and translation to align images
+5. Wrap and blend the second image with the base image
 
 ## Stitch your images
 ```bash

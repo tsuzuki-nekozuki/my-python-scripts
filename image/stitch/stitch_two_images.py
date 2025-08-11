@@ -102,6 +102,8 @@ class ImageStitcher:
         return self.keypoints1, self.keypoints2, self.good_matches
 
     def homography_matrix(self) -> NDArray[np.float64]:
+        if len(self.good_matches):
+            raise ValueError('Not enough matches found to compute homography.')
         pts1 = np.float32(
             [self.keypoints1[m.queryIdx].pt for m in self.good_matches]
             ).reshape(-1, 1, 2)
@@ -109,6 +111,8 @@ class ImageStitcher:
             [self.keypoints2[m.trainIdx].pt for m in self.good_matches]
             ).reshape(-1, 1, 2)
         homography, _ = cv2.findHomography(pts2, pts1, cv2.RANSAC, 5.0)
+        if homography is None:
+            raise ValueError('Homography could not be computed.')
         return homography
 
     def get_dimension(
