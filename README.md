@@ -48,6 +48,11 @@ racters in their file path using OpenCV.
 - [Set of smoothing algorithms for 1D-array](analysis/smooth_kit/smoothkit.py)
     Collection of smoothing algorithms for time series data.
 
+### Image processing
+
+- [Stitch two images](image/stitch/stitch_two_images.py)
+    Stitch the given image to the base image using AKAZE detector.
+
 ### Excel
 
 - [Convert Excel sheet to CSV files](excel/convert_to_csvs/sheet_to_csvfile.py)
