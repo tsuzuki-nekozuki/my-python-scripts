@@ -36,9 +36,11 @@ These scripts are tested in the following environment:
 - [Check environment](utils/system_info/check_system_info.py)
     Print system environment.
 
+- [Check file size](utils/filesize/get_filesize.py)
+    Count number of files and the total size of directory in a human readable way.
+
 - [OpenCV extensions](utils/opencv_unicode/opencv_ext.py)
-    Read and write images with non-ASCII chaimport cv2
-racters in their file path using OpenCV.
+    Read and write images with non-ASCII characters in their file path using OpenCV.
 
 ### Analysis
 
@@ -52,6 +54,9 @@ racters in their file path using OpenCV.
 
 - [Stitch two images](image/stitch/stitch_two_images.py)
     Stitch the given image to the base image using AKAZE detector.
+
+- [Resize images by batch](image/batch_resize/batch_resize.py)
+    Resize all images in a directory with respect to the given scale or size.
 
 ### Excel
 
