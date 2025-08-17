@@ -42,6 +42,9 @@ These scripts are tested in the following environment:
 - [OpenCV extensions](utils/opencv_unicode/opencv_ext.py)
     Read and write images with non-ASCII characters in their file path using OpenCV.
 
+- [Random string generator](utils/random_string/generate_random_string.py)
+    Generate a random string for password, tokens, test data, Captchas, short URLs, or game/app content.
+
 ### Analysis
 
 - [Convert matplotlib canvas into a numpy array](analysis/graph_to_numpy/graph_to_numpy.py)
