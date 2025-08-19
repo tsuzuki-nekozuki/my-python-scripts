@@ -61,6 +61,9 @@ These scripts are tested in the following environment:
 - [Resize images by batch](image/batch_resize/batch_resize.py)
     Resize all images in a directory with respect to the given scale or size.
 
+- [Hex <-> RGB converter](image/hex_and_rgb/hex_rgb_converter.py)
+    Convert Hex color string into RGB values and vice versa.
+
 ### Excel
 
 - [Convert Excel sheet to CSV files](excel/convert_to_csvs/sheet_to_csvfile.py)
