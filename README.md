@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This repository contains a collection of small Python scripts, utilities, and experiments that I use frequently.  
+This repository contains a collection of small Python scripts, utilities, and experiments.  
 They are designed to be simple, reusable, and easy to understand.
 
 
