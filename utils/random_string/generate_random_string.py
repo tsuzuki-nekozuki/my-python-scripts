@@ -8,7 +8,7 @@ def generate_random_string(length: int,
                            use_upper: bool,
                            use_lower: bool,
                            use_symbols: bool,
-                           use_others: bool,
+                           use_space: bool,
                            secure: bool = False) -> str:
     """
     Generate a random string with specified character classes.
@@ -19,6 +19,7 @@ def generate_random_string(length: int,
         use_upper (bool): Include A-Z.
         use_lower (bool): Include a-z.
         use_symbols (bool): Include punctuation symbols.
+        use_space (bool): Include SPACE.
         use_others (bool): Include other half-width ASCII characters
                            (space, etc.).
         secure (bool): If True, use `secrets` for cryptographic randomness;
@@ -36,8 +37,8 @@ def generate_random_string(length: int,
         chars += string.ascii_lowercase
     if use_symbols:
         chars += string.punctuation
-    if use_others:
-        chars += ''  # You can add anything you want
+    if use_space:
+        chars += ' '
     if not chars:
         raise ValueError("At least one character set must be selected.")
 
@@ -57,7 +58,7 @@ def parse_args():
     parser.add_argument('-u', '--upper', action='store_true', help='Include uppercase letters A-Z.')
     parser.add_argument('-L', '--lower', action='store_true', help='Include lowercase letters a-z.')
     parser.add_argument('-s', '--symbols', action='store_true', help='Include punctuation symbols.')
-    parser.add_argument('-o', '--others', action='store_true', help='Include other half-width ASCII characters (e.g., space).')
+    parser.add_argument('-sp', '--space', action='store_true', help='Include SPACE.')
     parser.add_argument('--secure', action='store_true', help='Use cryptographically secure randomness (secrets).')
     return parser.parse_args()
 
@@ -70,7 +71,7 @@ def main():
         use_upper=args.upper,
         use_lower=args.lower,
         use_symbols=args.symbols,
-        use_others=args.others,
+        use_space=args.space,
         secure=args.secure
     )
     print(rand_str)
